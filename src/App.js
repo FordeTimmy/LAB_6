@@ -7,8 +7,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import Content from './componets/content';
 import Footer from './componets/footer';
 import Header from './componets/header';
+import Create from './componets/create';
 import {} from 'react-router-dom';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import Read from './componets/read';
 function App() {
   return (
     <BrowserRouter>
@@ -24,10 +26,10 @@ function App() {
           </Nav>
         </Container>
       </Navbar>
-      <Routes>
-    <Route path='/' element={<Content></Content>}></Route>
-    <Route path='read' element={<Header></Header>}></Route>
-    <Route path='create' element={<Footer></Footer>}></Route>
+      <Routes> 
+    <Route path='/' element={<Content></Content>}></Route> 
+    <Route path='read' element={<Read></Read>}></Route>
+    <Route path='create' element={<Create></Create>}></Route>
       </Routes>
     </div>
     </BrowserRouter>
