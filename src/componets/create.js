@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 function Create() {
 
   const [title, setTitle] = useState('');
@@ -11,6 +12,16 @@ function Create() {
     console.log('Title: '+title+ 
     'Cover '+cover+
     'Author '+author); //printing the inputed deatils to the console
+
+    const book = ({
+      title: title,
+      cover: cover,
+      author: author
+    });
+
+    axios.post("http://localhost:4000/api/book",book)
+    .then()
+    .catch();
   }
   return (
     <div>
